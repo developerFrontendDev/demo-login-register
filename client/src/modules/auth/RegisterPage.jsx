@@ -21,7 +21,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex bg-[#0f1218]">
+    <div className="min-h-screen w-full flex bg-slate-50">
       {/* Left Side - Image & Branding */}
       <div className="hidden lg:flex w-1/2 relative bg-slate-900 overflow-hidden">
         {/* Background Image */}
@@ -56,15 +56,15 @@ const RegisterPage = () => {
       </div>
 
       {/* Right Side - Registration Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-[#0B1120]">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
         <div className="w-full max-w-md space-y-6">
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-2">Create Account</h2>
-            <p className="text-slate-400 text-sm">
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">Create Account</h2>
+            <p className="text-slate-600 text-sm">
               Enter your details to register as a new user.
             </p>
           </motion.div>
@@ -78,11 +78,11 @@ const RegisterPage = () => {
             >
               {/* Full Name Input */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-slate-300 block">Full Name</label>
+                <label className="text-sm font-medium text-slate-700 block">Full Name</label>
                 <div className="relative group">
                   <input
                     type="text"
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     placeholder="Enter your full name"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
@@ -95,11 +95,11 @@ const RegisterPage = () => {
 
               {/* Email Input */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-slate-300 block">Email Address</label>
+                <label className="text-sm font-medium text-slate-700 block">Email Address</label>
                 <div className="relative group">
                   <input
                     type="email"
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     placeholder="name@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -112,11 +112,11 @@ const RegisterPage = () => {
 
               {/* Mobile Input */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-slate-300 block">Mobile Number</label>
+                <label className="text-sm font-medium text-slate-700 block">Mobile Number</label>
                 <div className="relative group">
                   <input
                     type="tel"
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -129,11 +129,11 @@ const RegisterPage = () => {
 
               {/* NIC Input */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-slate-300 block">NIC Number</label>
+                <label className="text-sm font-medium text-slate-700 block">NIC Number</label>
                 <div className="relative group">
                   <input
                     type="text"
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     placeholder="National identity card number"
                     value={formData.nic}
                     onChange={(e) => setFormData({ ...formData, nic: e.target.value })}
@@ -146,11 +146,11 @@ const RegisterPage = () => {
 
               {/* Password Input */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-slate-300 block">Password</label>
+                <label className="text-sm font-medium text-slate-700 block">Password</label>
                 <div className="relative group">
                   <input
                     type={showPassword ? "text" : "password"}
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     placeholder="Create a password"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
@@ -182,7 +182,7 @@ const RegisterPage = () => {
 
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-slate-800"></div>
+                <div className="w-full border-t border-slate-200"></div>
               </div>
             </div>
 
@@ -192,7 +192,7 @@ const RegisterPage = () => {
               transition={{ delay: 0.3 }}
               className="text-center"
             >
-              <p className="text-slate-400">
+              <p className="text-slate-600">
                 Already have an account?{' '}
                 <Link to="/login" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
                   Sign in

@@ -18,7 +18,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex bg-[#0f1218]">
+    <div className="min-h-screen w-full flex bg-slate-50">
       {/* Left Side - Image & Branding */}
       <div className="hidden lg:flex w-1/2 relative bg-slate-900 overflow-hidden">
         {/* Background Image */}
@@ -53,15 +53,15 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-[#0B1120]">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
         <div className="w-full max-w-md space-y-8">
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-2">Welcome Back</h2>
-            <p className="text-slate-400 text-sm">
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">Welcome Back</h2>
+            <p className="text-slate-600 text-sm">
               Please enter your credentials to access your dashboard.
             </p>
           </motion.div>
@@ -75,13 +75,13 @@ const LoginPage = () => {
             >
               {/* Username Input */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-300 block">
+                <label className="text-sm font-medium text-slate-700 block">
                   Mobile Number or Email
                 </label>
                 <div className="relative group">
                   <input
                     type="text"
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3.5 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3.5 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     placeholder="Enter your mobile number or email"
                     value={formData.identifier}
                     onChange={(e) => setFormData({ ...formData, identifier: e.target.value })}
@@ -94,13 +94,13 @@ const LoginPage = () => {
 
               {/* Password Input */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-300 block">
+                <label className="text-sm font-medium text-slate-700 block">
                   Password
                 </label>
                 <div className="relative group">
                   <input
                     type={showPassword ? "text" : "password"}
-                    className="w-full bg-[#161f32] border border-slate-700/50 rounded-lg px-4 py-3.5 pl-4 pr-12 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3.5 pl-4 pr-12 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                     placeholder="Enter your password"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
@@ -120,7 +120,7 @@ const LoginPage = () => {
                 <button
                   type="button"
                   onClick={() => setRememberMe(!rememberMe)}
-                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 transition-colors"
                 >
                   {rememberMe ? (
                     <CheckSquare className="w-4 h-4 text-blue-500 fill-blue-500/10" />
@@ -147,7 +147,7 @@ const LoginPage = () => {
 
             <div className="relative my-8">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-slate-800"></div>
+                <div className="w-full border-t border-slate-200"></div>
               </div>
             </div>
 
@@ -157,7 +157,7 @@ const LoginPage = () => {
               transition={{ delay: 0.3 }}
               className="text-center"
             >
-              <p className="text-slate-400">
+              <p className="text-slate-600">
                 New to VCare?{' '}
                 <Link to="/register" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
                   Register Now
