@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { User, Lock, Eye, EyeOff, Mail, Phone, CreditCard } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { User, Lock, Eye, EyeOff, Mail, Phone, CreditCard, X } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 import loginBg from '../../assets/images/Gemini_Generated_Image_5nmpua5nmpua5nmp.png';
+import vcareLogo from '../../assets/Logo/VCare Nursing Logo.png';
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -18,6 +20,8 @@ const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Registration attempt:', formData);
+    // Simulate navigation to client dashboard
+    navigate('/client/dashboard');
   };
 
   return (
@@ -34,10 +38,18 @@ const RegisterPage = () => {
 
         {/* Content Overlay */}
         <div className="relative z-10 flex flex-col justify-center h-full p-16 max-w-2xl">
-          <motion.h1
+          <motion.img
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            src={vcareLogo}
+            alt="VCare Nursing Logo"
+            className="w-32 mb-8"
+          />
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             className="text-5xl font-bold text-white mb-6 leading-tight"
           >
             Join the Future <br />
@@ -56,7 +68,16 @@ const RegisterPage = () => {
       </div>
 
       {/* Right Side - Registration Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white relative">
+        {/* Cancel Button */}
+        <Link
+          to="/"
+          className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-700 transition-colors"
+          aria-label="Back to Home"
+        >
+          <X className="w-5 h-5" />
+        </Link>
+
         <div className="w-full max-w-md space-y-6">
           <motion.div
             initial={{ opacity: 0, x: 20 }}

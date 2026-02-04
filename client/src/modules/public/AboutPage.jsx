@@ -39,7 +39,7 @@ const AboutPage = () => {
 
       {/* Hero Section - Light & Premium */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-white">
-        <motion.div style={{ y: yHero }} className="absolute inset-0 z-0 opacity-20">
+        <motion.div style={{ y: yHero }} className="absolute inset-0 z-0 opacity-50">
           <img src={heroBg} alt="Medical Care" className="w-full h-full object-cover" />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-white" />

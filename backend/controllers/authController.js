@@ -63,7 +63,7 @@ exports.registerClient = async (req, res, next) => {
       userId = newUser.rows[0].user_id;
     }
 
-    // 3. Generate OTP and create Client Profile (Data Layer)
+    //3. Generate OTP and create Client Profile (Data Layer)
     const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate 6-digit OTP
     const expiresAt = new Date(Date.now() + 10 * 60000); // 10 minutes from now
 
