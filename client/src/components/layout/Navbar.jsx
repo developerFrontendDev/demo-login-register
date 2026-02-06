@@ -22,7 +22,6 @@ const Navbar = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-2">
             <img src={logo} alt="VCare Nursing" className="h-18 w-auto object-contain" />
           </Link>
@@ -31,7 +30,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</Link>
 
-            {/* Desktop Services Dropdown */}
+            {/* Desktop Services Dropdown - COMMENTED OUT FOR TESTING */}
+            {/*
             <div className="relative group">
               <button
                 className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors py-2"
@@ -56,9 +56,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            */}
+
             <Link to="/about" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</Link>
-
-
 
             <Link
               to="/login"
@@ -87,7 +87,8 @@ const Navbar = () => {
           <div className="px-4 pt-2 pb-6 space-y-2">
             <Link to="/" className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 bg-slate-50 rounded-lg">Home</Link>
 
-            {/* Mobile Services Dropdown */}
+            {/* Mobile Services Dropdown - COMMENTED OUT FOR TESTING */}
+            {/*
             <div>
               <button
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
@@ -97,7 +98,6 @@ const Navbar = () => {
                 {isMobileServicesOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
               </button>
 
-              {/* Mobile Submenu */}
               {isMobileServicesOpen && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
@@ -119,6 +119,8 @@ const Navbar = () => {
                 </motion.div>
               )}
             </div>
+            */}
+
             <Link to="/about" className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg">About</Link>
 
             <Link to="/login" className="block w-full text-center mt-4 px-5 py-3 bg-blue-600 text-white rounded-xl font-medium">

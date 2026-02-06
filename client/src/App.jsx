@@ -13,6 +13,12 @@ import WorkerRegistrationPage from './modules/public/service_team/WorkerRegistra
 import WorkerDashboardDemo from './modules/public/service_team/WorkerDashboardDemo';
 import ClientDashboardDemo from './modules/public/ClientDashboardDemo';
 import ClientProfileDemo from './modules/public/ClientProfileDemo';
+import AdminDashboard from './modules/admin/admin_dashboard_main/AdminDashboard';
+import UserManagement from './modules/admin/user_managemnet/user_managemnet';
+import WorkerVerification from './modules/admin/worker_verifications/worker_verifications';
+import Financials from './modules/admin/financial/financial';
+import Reports from './modules/admin/reports/reports';
+import Settings from './modules/admin/settings/settings';
 import ScrollToTop from './components/common/ScrollToTop';
 import './App.css';
 
@@ -28,7 +34,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
 
-          {/* Module Routes */}
+          {/* Module Routes - COMMENTED OUT FOR TESTING RESTRICTION */}
+          {/*
           <Route path="/services/home-nursing" element={<HomeNursingPage />} />
           <Route path="/services/hospital-staffing" element={<HospitalStaffingPage />} />
           <Route path="/services/child-care" element={<ChildCarePage />} />
@@ -38,8 +45,15 @@ function App() {
           <Route path="/services/provider-dashboard" element={<WorkerDashboardDemo />} />
           <Route path="/client/dashboard" element={<ClientDashboardDemo />} />
           <Route path="/client/profile" element={<ClientProfileDemo />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/users" element={<UserManagement />} />
+          <Route path="/admin/workers" element={<WorkerVerification />} />
+          <Route path="/admin/financial" element={<Financials />} />
+          <Route path="/admin/reports" element={<Reports />} />
+          <Route path="/admin/settings" element={<Settings />} />
           <Route path="/services/*" element={<Navigate to="/" replace />} />
           <Route path="/dashboard" element={<Navigate to="/login" replace />} />
+          */}
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
